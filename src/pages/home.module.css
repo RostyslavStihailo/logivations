@@ -1,0 +1,6 @@
+.home{
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,20 @@
+.mod{
+    margin: auto;
+    width: 40%;
+    height: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    border: 3px solid #D2691E;
+    background-color: #B8860B;
+    text-align: center;
+}
+
+.mod h3{
+    margin-top: 30px;
+
+}
+
+.mod li{
+    text-align: left;
+    margin-top: 20px;
+}
