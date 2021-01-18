@@ -14,18 +14,17 @@ class Home extends React.Component{
         isClear:false,
         isTotal:false,
         sortedList:null,
-        total: null
+        total: null,
+        prevCom:null,
+        err:false
     }
 
     listHandler(list){
-        list.sort((a, b) =>
+        const newArr = [...list];
+        newArr.sort((a, b) =>
             Date.parse(a.split(' ')[1]) - Date.parse(b.split(' ')[1])
         )
-        console.log(list)
-    }
-
-    onClickHandler(){
-        console.log('onclick')
+        return newArr
     }
 
     onChangeHandler(event){
@@ -34,7 +33,7 @@ class Home extends React.Component{
         })
     }
 
-    onSubmitHandler(event)  {
+    async onSubmitHandler(event)  {
         event.preventDefault();
         switch (this.state.command.split(' ')[0]){
             case 'add': if(this.state.command.split(' ').length === 5)
@@ -43,7 +42,9 @@ class Home extends React.Component{
                 isAdd: true,
                 isList:false,
                 isTotal:false,
-                isClear:false
+                isClear:false,
+                prevCom: this.state.command,
+                err:false
             })
             break;
             case 'list':
@@ -52,7 +53,10 @@ class Home extends React.Component{
                     isAdd: false,
                     isList:true,
                     isTotal:false,
-                    isClear:false
+                    isClear:false,
+                    sortedList: this.listHandler(this.props.opList),
+                    err:false
+
                 })
                 break;
             case 'total':
@@ -61,7 +65,9 @@ class Home extends React.Component{
                     isAdd: false,
                     isList:false,
                     isTotal:true,
-                    isClear:false
+                    isClear:false,
+                    total: await fixer(this.props.opList),
+                    err:false
                 })
                 break;
             case 'clear':
@@ -71,11 +77,14 @@ class Home extends React.Component{
                     isAdd: false,
                     isList:false,
                     isTotal:false,
-                    isClear:true
+                    isClear:true,
+                    err:false
                 })
             break;
             default:
-                console.log('default')
+                this.setState({
+                    err: true
+                })
         }
 
       /*  if(this.state.command.split(' ')[0] === 'add' && this.state.command.split(' ').length === 5)
@@ -87,7 +96,6 @@ class Home extends React.Component{
     }
 
     render() {
-        console.log(this.props.opList)
         return(
            <div>
             <form onSubmit={this.onSubmitHandler.bind(this)}>
@@ -100,7 +108,6 @@ class Home extends React.Component{
                    />
                    <button type='submit'
                            className='btn btn-primary'
-                           onClick={this.onClickHandler.bind(this)}
                    >Submit</button>
                </div>
            </form>
