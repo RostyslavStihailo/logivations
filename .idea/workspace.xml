@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05028f9d-b063-4419-be63-25f592f5b5ef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/fixer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/fixer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +57,7 @@
       <updated>1610878103501</updated>
       <workItem from="1610878106609" duration="17530000" />
       <workItem from="1610907213907" duration="9230000" />
-      <workItem from="1610965073814" duration="6510000" />
+      <workItem from="1610965073814" duration="7023000" />
     </task>
     <servers />
   </component>

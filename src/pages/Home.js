@@ -48,7 +48,6 @@ class Home extends React.Component{
             })
             break;
             case 'list':
-                this.listHandler(this.props.opList)
                 this.setState({
                     isAdd: false,
                     isList:true,
@@ -60,7 +59,6 @@ class Home extends React.Component{
                 })
                 break;
             case 'total':
-                fixer(this.props.opList)
                 this.setState({
                     isAdd: false,
                     isList:false,
@@ -86,9 +84,6 @@ class Home extends React.Component{
                     err: true
                 })
         }
-
-      /*  if(this.state.command.split(' ')[0] === 'add' && this.state.command.split(' ').length === 5)
-            this.props.o*///nPush(this.state.command);
 
         this.setState({
             command:''
